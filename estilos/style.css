@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+/*FONTES*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+/**/
+
+/*PALETA*/
+:root{
+    /*Sorvetes*/
+    --choco: #311E18;
+    --menta: #89C393;
+    --limon: #E8F3C8;
+    --maracuja: #F4B400;
+
+    /*Padrões*/
+    --fonte: #0C1519;
+    --fundo: #FDF8F3;
+}
+/**/
+
+/*RESET*/
+*{
+    margin: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+
+    font-family: "Montserrat", sans-serif;
+}
+/**/
+
+/*CONFIGURAÇÕES DE PÁGINA*/
+html,body{
+    width: auto;
+    height: 100vh;
+
+    background-color: var(--fundo);
+
+    scroll-behavior: smooth;
+}
+/**/
+
+/*CONFIGURAÇÕES DE CABEÇALHO*/
+.header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    height: 70px;
+    margin-top: 30px;
+
+    background-color: var(--choco);
+    box-shadow: 0px 0px 20px #00000057; /*Deslocamento pra direita, Deslocamento pra baixo e Espahamento*/
+}
+
+/*TÍTULO*/
+.header-title{
+    font-family: "DynaPuff", system-ui;
+    color: var(--fundo);
+}
+/**/
+
+/*CONFIGURAÇÕES DE MAIN*/
+.main{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 30px 0;
+}
+
+/*SECTION DE NAV*/
+section.main-section{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 400px;
+    height: 70px;
+
+    margin: 0 0 35px 0;
+
+    border-radius: 60px 70px 40px 140px;
+    background-color: var(--choco);
+    box-shadow: 0px 0px 20px #00000057;
+}
+
+/*NAV*/
+#section-nav > a{
+    padding: 10px;
+    
+    text-decoration: none;
+    color: var(--fundo);
+}
+
+#section-nav > a:hover{
+    color: var(--maracuja);
+}
+/**/
+
+/*SECTION PRINCIPAL*/
+section.main-hero{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    margin: 0 30px;
+}
+
+/*TEXTS (P)*/
+p.text{
+    margin: 0 10px;
+
+    font-size: 1.2em;
+    text-align: justify;
+
+    line-height: 25px;
+
+    color: var(--fonte);
+}
+
+/*DIV IMAGEM*/
+div.hero-container{
+    text-align: center;
+}
+
+/*DIMENSÕES DA IMAGEM*/
+div > img{
+    width: 400px;
+}
+/**/
+
+/*SECTION SABORES*/
+section.section-sabores{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 10px;
+    border-top: 2px solid var(--choco);
+}
+
+/*SUB-TÍTULO*/
+h2.sub-title{
+    font-size: 1.8em;
+    font-family: "DynaPuff", system-ui;
+    color: var(--fonte);
+}
+
+/*AGRUPAMENTO DOS CARDS*/
+div.cards{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 32px;
+}
+
+/*CONFIGURAÇÃO GERAL DOS CARDS*/
+article.card-container{
+    position: relative;
+
+    width: 320px;
+    height: 450px;
+
+    margin-top: 30px;
+
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.268);
+
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/*DIV GERAL DOS CARDS*/
+div.card-content{
+    position: absolute;
+
+    position: relative; /*pro bottom-card*/
+
+    width: 100%;
+    height: 100%;
+}
+
+/*CONFIGURAÇÕES INDIVIDUAIS DE CADA CARD*/
+div#first-card{
+    background-color: var(--menta);
+}
+
+div#second-card{
+    background-color: var(--limon);
+}
+
+div#third-card{
+    background-color: var(--maracuja);
+}
+/*===CONFIGRAÇÕES DE CADA CARD===*/
+
+/*CONFIGURAÇÕES DA DIV DO TOPO => IMAGEM*/
+div.card-top{
+    height: 250px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+}
+
+/*CONFIGURAÇÕES DE CADA IMAGEM*/
+div#img-choco{
+    background: var(--menta) url(../imagens/chocomenta-wall.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+div#img-limao{
+    background: var(--limon) url(../imagens/limao-wall.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+div#img-maracuja{
+    background: var(--maracuja) url(../imagens/maracuja-wall.jpg) center center no-repeat;
+    background-size: cover;
+}
+/*===CONFIGRAÇÕES DE CADA IMAGEM===*/
+
+/*CONFIGURAÇÕES DA DIV DE BAIXO => CONTEÚDO*/
+div.card-bottom{
+    position: absolute;
+    bottom: -40px;
+
+    width: 100%;
+    height: 70%;
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+/*===CONFIGRAÇÕES DE CADA COR DE DIV===*/
+div#bottom-choco{
+    background: var(--menta);
+}
+
+div#bottom-limao{
+    background: var(--limon);
+}
+
+div#bottom-maracuja{
+    background: var(--maracuja);
+}
+/*===CONFIGRAÇÕES DE CADA COR DE DIV===*/
+
+/*SUB-SUB-TÍTULO*/
+h3.sub-sub-title{
+    margin-top: 8px;
+    padding: 5px;
+
+    border-radius: 60px 70px 40px 140px;
+
+    font-family: "DynaPuff", system-ui;
+    font-size: 1.5em;
+
+    text-align: center;
+    text-shadow: 2px 2px 4px #0000004f;
+    color: var(--fundo);
+
+    background-color: var(--choco);
+    box-shadow: 0px 0px 20px #00000057;
+}
+
+/*===CONFIGRAÇÕES DO H3 DE CADA CARD===*/
+h3#title-choco:hover{
+    color: var(--menta);
+}
+
+h3#title-limao:hover{
+    color: var(--limon);
+}
+
+h3#title-maracuja:hover{
+    color: var(--maracuja);
+}
+/*===CONFIGRAÇÕES DO H3 DE CADA CARD===*/
+
+/*PARÁGRAFOS*/
+div.card-bottom > p{
+    margin-top: 15px;
+
+    text-align: left;
+    text-indent: 1.2em;
+}
+/**/
+
+/*FOOTER*/
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: auto;
+    height: 70px;
+
+    margin: 35px 45px;
+
+    border-radius: 60px 70px 40px 140px;
+    background-color: var(--choco);
+    box-shadow: 0px 0px 20px #00000057;
+
+    overflow: hidden;
+}
+
+div#contacts > a > img{
+    width: 40px;
+
+    margin: 10px;
+
+    border-radius: 50%;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.69);
+
+    /*Pra que quando eu passe o mouse em cima, a borda faça parte da imagem e não fique arredando os outros links*/
+    box-sizing: border-box;
+}
+
+div#contacts > a > img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.889);
+
+    transform: translate(-3px, -3px);
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.69);
+
+    transition: transform 0.3s, border 0.2s;
+}
+
+/**/

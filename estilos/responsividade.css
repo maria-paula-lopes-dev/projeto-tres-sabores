@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/*PALETA*/
+:root{
+    /*Sorvetes*/
+    --choco: #311E18;
+    --menta: #89C393;
+    --limon: #E8F3C8;
+    --maracuja: #F4B400;
+
+    /*Padrões*/
+    --fonte: #0C1519;
+    --fundo: #FDF8F3;
+}
+/**/
+
+@media screen and (min-width: 768px){
+    html, body{
+        background-image: linear-gradient(
+            to left,
+            var(--fundo),
+            var(--limon),
+            var(--menta)
+        );
+        background-attachment: fixed;
+    }
+
+    /*NAV*/
+    #section-nav > a{
+        position: relative;
+    }
+
+    #section-nav > a::after{
+        content: " ";
+
+        width: 0%;
+        height: 2px;
+
+        background-color: var(--maracuja);
+
+        position: absolute;
+        left: 0; /*começa no início do link*/
+        bottom: 0; /*na base do link*/
+
+        transition: 0.5s ease-in-out; /*animaação de suavisação*/
+    }
+
+    #section-nav > a:hover::after{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    /*SECTION SABORES*/
+    div.cards{
+        display: flex;
+        flex-flow: row nowrap;
+
+        margin: 0 25px;
+    }
+}
